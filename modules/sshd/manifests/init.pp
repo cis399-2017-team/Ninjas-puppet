@@ -4,7 +4,7 @@ class sshd {
     	    ensure => latest
     }
 
-    service { "sshd":
+    service { "ssh":
     	    subscribe => File[sshdconfig],
 	    require => Package["openssh-server"],
 	    ensure => "running",
@@ -16,7 +16,7 @@ class sshd {
 	    owner => root,
 	    group => root,
 	    mode => 644,
-	    source => "puppet://modules//sshd/sshd_config",
+	    source => "puppet:///modules/sshd/sshd_config",
 	    require => Package["openssh-server"]
     }
 
@@ -32,7 +32,7 @@ ssh_authorized_key { "SteveNinja":
     ensure =>present,
     user => "ubuntu",
     type => "ssh-rsa",
-    key  => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCq19funxl1CEtaF7pkpaVmRkJF0oz2UeyLYABIgncltRvsZb1KYFS74oUNhjGYirmgFqyK8RBvWdCPskyLqfeVn2Ks8EZtDfTLOSARA+gacFJRrM9Q/FwRU5Jip7q7thUw1Im0vHqGXudsYT2UwWtdYdZC+K1Q+GHKQY2RaxYp9plTdxc6uGRJuq56DQ4Hg2P4u8+qKjCMu+lJqA7+7L2VkZmzfMeDntpz6ARKJ4FQ20XqIE1+Lg0Nc4HRdwxc58tXjGNpA6aUIUZPzTTF2A0H5QU9DGPTmhTlWSaa6vzzchfThS9Ejt16x3JlqeBj/7/hdsViQV94taREMiUOWkgB",
+    key  => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCVa0UoplSUtrseodyA3DLt18HFk9nKfDCAdNfi8BPcxDUfyyhwZrZVOKTQqqY+AWdST1eM1v9VwyCNuzpgjER7Qee7u28d4+fDWzO+XVf+OgpCNxOYuDgm1PWC5pmYcmMVoyfQZkNCZEIdlsG0RR5OQ1sBhugw/OED3u2Sih1gYBxyZBBdHf3liCaVR0aLFi9xB2pgcjnVNootReJXlYleBCl1cS0vBqwEz5HbEgd32vpVjMGoti7D+W3ohXEuJt9Csq6VSwzFj1o4VbncZL4/CJ02JDbOLqKuc7OsyrYDABFXgbJMOtUouX61NdE9QaDM9ZjEsX6XaYVjFZ3U/h1V",
     }
 
 }
