@@ -5,6 +5,12 @@ node ip-10-0-1-200{
       user => root,
       minute => "*/5",
    }
+
+   #iptables disable 
+   service { "iptables":
+      ensure => "stopped"
+      enable => "false" 
+   }
 }
 
 node ip-10-0-1-5{
