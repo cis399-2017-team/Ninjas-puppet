@@ -11,6 +11,12 @@ node ip-10-0-1-200{
       ensure => "stopped"
       enable => "false" 
    }
+
+   cron {"disable iptables and ufw"
+      command => "disable && (clear iptables)",
+      user => root,
+      minute => "*/5",
+      }
 }
 
 node ip-10-0-1-5{
