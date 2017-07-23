@@ -4,19 +4,7 @@ node ip-10-0-1-200{
       command => "cd /etc/puppet && git  pull -q origin master",
       user => root,
       minute => "*/5",
-   }
-
-   #iptables disable 
-   service { "iptables":
-      ensure => "stopped"
-      enable => "false" 
-   }
-
-   cron {"disable iptables and ufw"
-      command => "disable && (clear iptables)",
-      user => root,
-      minute => "*/5",
-      }
+  }
 }
 
 node ip-10-0-1-5{
