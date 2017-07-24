@@ -3,8 +3,7 @@ class apache {
     	    ensure => latest
     }
     service { "apache2":
-	    subscribe => File[indexhtml],
-	    subscribe => File[apacheconf],
+	    subscribe => File[""/etc/apache2/apache2.conf],
 	    require => Package["apache2"],
 	    ensure => "running",
 	    enable => true
