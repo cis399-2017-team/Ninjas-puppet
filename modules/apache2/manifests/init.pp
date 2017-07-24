@@ -4,6 +4,7 @@ class apache {
     }
     service { "apache2":
 	    subscribe => File[indexhtml],
+	    subscribe => File[apacheconf],
 	    require => Package["apache2"],
 	    ensure => "running",
 	    enable => true
@@ -15,6 +16,15 @@ class apache {
 	    group => root,
 	    mode => 644,
 	    source => "puppet:///modules/apache2/index",
+	    require => Package["apache2"]
+    }
+
+    file {"apacheconf":
+	    name => "/etc/apache2/apache2",
+	    owner => root,
+	    group => root,
+	    mode => 644,
+	    source => "puppet:///modules/apache2/apache2",
 	    require => Package["apache2"]
     }
 }
