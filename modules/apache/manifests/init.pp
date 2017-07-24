@@ -10,20 +10,20 @@ class apache {
     }
 
     file {"indexhtml":
-	    name => "/var/www/html/index",
+	    name => "/var/www/html/index.html",
 	    owner => root,
 	    group => root,
 	    mode => 644,
-	    source => "puppet:///modules/apache/index",
+	    source => "puppet:///modules/apache/index.html",
 	    require => Package["apache2"]
     }
 
     file {"apacheconf":
-	    name => "/etc/apache2/apache2",
+	    name => "/etc/apache2/apache2.conf",
 	    owner => root,
 	    group => root,
 	    mode => 644,
-	    source => "puppet:///modules/apache/apache2",
+	    source => "puppet:///modules/apache/apache2.conf",
 	    require => Package["apache2"]
     }
 }
