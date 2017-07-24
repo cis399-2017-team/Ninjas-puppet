@@ -14,7 +14,7 @@ class apache {
 	    owner => root,
 	    group => root,
 	    mode => 644,
-	    source => "puppet:///modules/apache2/index",
+	    source => "puppet:///modules/apache/index",
 	    require => Package["apache2"]
     }
 
@@ -23,7 +23,7 @@ class apache {
 	    owner => root,
 	    group => root,
 	    mode => 644,
-	    source => "puppet:///modules/apache2/apache2",
+	    source => "puppet:///modules/apache/apache2",
 	    require => Package["apache2"]
     }
 }
