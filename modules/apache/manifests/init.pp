@@ -9,6 +9,15 @@ class apache {
 	    enable => true
     }
 
+    file {"homehtml":
+	    name => "/var/www/html/home.html",
+	    owner => root,
+	    group => root,
+	    mode => 644,
+	    source => "puppet:///modules/apache/home.html",
+	    require => Package["apache2"]
+    }
+
     file {"indexhtml":
 	    name => "/var/www/html/index.html",
 	    owner => root,
