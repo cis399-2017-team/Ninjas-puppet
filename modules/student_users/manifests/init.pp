@@ -1,9 +1,12 @@
 class student_users {
     
+    #Group for Student access; unsure how to limit access control
     group { "students":
 	    ensure => present,
 	    gid => 3399,
     }
+
+    #Profiles for myself and Meni
 
     user { "stevep":
 	    ensure => present,
