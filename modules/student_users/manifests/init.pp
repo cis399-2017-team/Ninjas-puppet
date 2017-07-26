@@ -1,4 +1,4 @@
-class user {
+class student_users {
     
     group { "Students":
 	    ensure => present,
