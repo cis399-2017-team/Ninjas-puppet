@@ -6,10 +6,12 @@ node ip-10-0-1-5 {
      include agentupdate
      include sshd
      include apache
+     include student_users
 }
 
 node ip-10-0-1-164 {
      include agentupdate
      include sshd
      include apache
+     include student_users
 }
