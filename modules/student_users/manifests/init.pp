@@ -1,6 +1,6 @@
 class student_users {
     
-    group { "Students":
+    group { "students":
 	    ensure => present,
 	    gid => 3399,
     }
