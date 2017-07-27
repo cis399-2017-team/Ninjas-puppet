@@ -11,7 +11,7 @@ class student_users {
            ensure => present,
 	   gid => 3399,
 	   managehome => true,
-           shell => "bin/bash",
+           shell => "/bin/bash",
    }
 
    ssh_authorized_key { "nsato10":
@@ -25,7 +25,7 @@ class student_users {
            ensure => present,
 	   gid => 3399,
 	   managehome => true,
-           shell => "bin/bash",
+           shell => "/bin/bash",
    }
 
    ssh_authorized_key { "mister_person":
@@ -40,7 +40,7 @@ class student_users {
            ensure => present,
 	   gid => 3399,
 	   managehome => true,
-           shell => "bin/bash",
+           shell => "/bin/bash",
    }
 
    ssh_authorized_key { "stevev":
@@ -55,7 +55,7 @@ class student_users {
            ensure => present,
 	   gid => 3399,
 	   managehome => true,
-           shell => "bin/bash",
+           shell => "/bin/bash",
    }
 
    ssh_authorized_key { "cplachno":
@@ -69,7 +69,7 @@ class student_users {
            ensure => present,
 	   gid => 3399,
 	   managehome => true,
-           shell => "bin/bash",
+           shell => "/bin/bash",
    }
 
    ssh_authorized_key { "nboyd":
