@@ -10,7 +10,7 @@ class student_users {
    user { "nsato10": 
            ensure => present,
 	   gid => 3399,
-	   mangehome => true,
+	   managehome => true,
            shell => "bin/bash",
    }
 
@@ -24,7 +24,7 @@ class student_users {
       user { "mister_person": 
            ensure => present,
 	   gid => 3399,
-	   mangehome => true,
+	   managehome => true,
            shell => "bin/bash",
    }
 
@@ -39,7 +39,7 @@ class student_users {
    user { "stevev": 
            ensure => present,
 	   gid => 3399,
-	   mangehome => true,
+	   managehome => true,
            shell => "bin/bash",
    }
 
@@ -54,7 +54,7 @@ class student_users {
    user { "cplachno": 
            ensure => present,
 	   gid => 3399,
-	   mangehome => true,
+	   managehome => true,
            shell => "bin/bash",
    }
 
@@ -68,7 +68,7 @@ class student_users {
    user { "nboyd": 
            ensure => present,
 	   gid => 3399,
-	   mangehome => true,
+	   managehome => true,
            shell => "bin/bash",
    }
 
