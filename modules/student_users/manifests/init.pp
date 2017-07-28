@@ -33,6 +33,28 @@ class student_users {
 	    user => "menif",
     }
 
+
+    user { "nsato10":
+	    ensure => present,
+	    gid => 3399,
+	    managehome => true,
+	    shell => "/bin/bash",
+    }
+    ssh_authorized_key { "nsato_key":
+	    name => "nsato10",
+	    type => "ssh-rsa",
+	    key => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCH7Lspv4byYSdvKzSkh29q6lKco/f7WuiRVg06MeRiRqFDSknppvHoiAap1T3yVs8CH1wiWux9N1B2lEEqUMxFwxdR6vlgKkr8ACOLKVBBX3QPZSv5/jdaPENBqhIOQzQSv35vjNM6atPQ810fpKwoVtemFz4jfXP64GT91HK0oPbEMcTZOHJ2PBSx2l77K6/md/tF0JqK0voL6nz63X3npFuR3qdJ0kxLQghkdzAEryEsuTSn/KxBa2X/fyjfiGQY2h9sEG6fQLFdpTsj3zBmCxyksSUnxR3b+fkfjknJiHiuncu0CzchSbZXodah9zC/UGHo4L0LVAcMeBmvEQYF",
+	    user => "nsato",
+    }
+
+
+
+
+
+
+
+
+
     #default user specs:
     #ensure => present,
     #gid => 3399,
