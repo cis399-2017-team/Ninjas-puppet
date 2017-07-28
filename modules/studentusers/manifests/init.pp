@@ -1,4 +1,4 @@
-class student_users {
+class studentusers {
     
     #Group for Student access; unsure how to limit access control
     group { "students":
