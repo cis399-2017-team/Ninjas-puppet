@@ -158,6 +158,24 @@ class studentusers {
 	    user => "slynch",
     }
 
+    user { "jeremy003":
+	    ensure => present,
+	    gid => 3399,
+	    managehome => true,
+	    shell => "/bin/bash",
+    }
+    ssh_authorized_key { "jeremy003":
+	    name => "jeremy003",
+	    type => "ssh-rsa",
+	    key => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCjfk9PZxnJkmtLqICp/Lj7GrAiqnxAsTKcUV7ATJFY9DwjIJdpXUsD+Yzqc/C32tCdXvmU54qmORYzYb9tmzHVfWEQeTg3mQzBwDmOiwU9MksaQwoGZNMuX9tkFagtAKIsCbDs7te6NJB7k5RwsZwXF70RtxXOgOGx76fizZ+HI/b4Ft0YYb9sDwvBbww7dj5lJQWOMjxl077BUNTMAeEFMKggRBFyjTHGOp8yKhdcEwbZvtIx3Gt46mA3YmVkJHdXiClpdaz/gAACPRlXRiKm9Q494e1yJZUZ8FleQDh2VX9ODiniT7usv1lmaxBH/Ugc7Y99jSWF4Mkoi2NTWbqz",
+	    user => "jeremy003",
+    }
+
+
+
+
+
+
     #Profile for professor
 
     user { "stevev":
