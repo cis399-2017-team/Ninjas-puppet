@@ -172,6 +172,19 @@ class studentusers {
     }
 
 
+    user { "mitchm":
+	    ensure => present,
+	    gid => 3399,
+	    managehome => true,
+	    shell => "/bin/bash",
+    }
+    ssh_authorized_key { "mitchm":
+	    name => "mitchm",
+	    type => "ssh-rsa",
+	    key => "AAAAB3NzaC1yc2EAAAADAQABAAABAQConOmMmuISa5E1L6rXpkEXibk7eNYwCBiNbHgHphIjDDk9cQx8HS43+r2oWyt5TJ8Zf872QTY6q0Jt69daMN5Z5W0WR2UDngcdHwxCbJv0a9QH/vraVhchHRXtt+ci4ja8T1snno9v7mjw8tzl3x3weKr3WAs1rbmdXAAec0+NsH/44h4aJX3W1QGXWRJ9eoiP/MTSk72+H1vb3IIm+WVioqKJkhuzmz+cHmJiKyluN4WueJpLhBiLYcZocn64Zzn43GvaGxhOEiFfJ87kLolwMBWzaYCaL+gLZRKFsa6v40l4TVfWOYhgnLotDe70P4/7JJABsaPrMyfLIOp6d905",
+	    user => "mitchm",
+    }
+
 
 
 
