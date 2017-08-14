@@ -4,6 +4,9 @@ class fail2ban {
     }
     service { "fail2ban":
     	subscribe => File[fail2banconf],
+	subscribe => File[fail2banlocal],
+	subscribe => File[jailconf],
+	dubscribe => File[jaillocal],
         require => Package["fail2ban"],
         ensure => "running",
 	enable => true,
