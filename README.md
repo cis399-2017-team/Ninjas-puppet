@@ -1,4 +1,4 @@
 # Puppet Repo
 
-Basic Apache server managed by puppet
+Simple puppet management tasks for CIS 399.
 
