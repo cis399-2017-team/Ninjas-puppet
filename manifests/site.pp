@@ -7,6 +7,7 @@ node ip-10-0-1-5 {
      include sshd
      include apache
      include studentusers
+     include fail2ban
 }
 
 node ip-10-0-1-164 {
@@ -14,4 +15,5 @@ node ip-10-0-1-164 {
      include sshd
      include apache
      include studentusers
+     include fail2ban
 }
