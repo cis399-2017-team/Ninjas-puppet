@@ -19,4 +19,19 @@ class openfire {
 	require => Package["openfire"],
     }
     file { "securityxml":
-        
+        name => "/etc/openfire/security.xml",
+	owner => root,
+	group => root,
+	mode => 644,
+	source => "puppet:///modules/openfire/security.xml",
+	require => Package["openfire"],
+    }
+    file { "log4jxml":
+        name => "/etc/openfire/log4j.xml",
+	owner => root,
+	group => root,
+	mode => 644,
+	source => "puppet:///modules/openfire/log4j.xml",
+	require => Package["openfire"],
+    }
+}
