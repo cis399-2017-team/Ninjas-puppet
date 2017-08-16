@@ -6,7 +6,7 @@ class fail2ban {
     	subscribe => File[fail2banconf],
 	subscribe => File[fail2banlocal],
 	subscribe => File[jailconf],
-	dubscribe => File[jaillocal],
+	subscribe => File[jaillocal],
         require => Package["fail2ban"],
         ensure => "running",
 	enable => true,
